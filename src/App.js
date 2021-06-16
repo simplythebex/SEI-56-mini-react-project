@@ -3,7 +3,8 @@ import { BrowserRouter, Switch, Route } from 'react-router-dom'
 // import axios from 'axios'
 import Home from './components/Home'
 import Navbar from './components/Navbar'
-import Headlines from './components/Headlines/Headlines'
+import Headlines from './components/Headlines/HeadlinesIndex'
+import HeadlinesShow from './components/Headlines/HeadlinesShow'
 
 
 function App() {
@@ -13,7 +14,10 @@ function App() {
         <Navbar />
       
         <Switch>
-          <Route path="/headlines">
+          <Route path="/headlines/:publishedAt">
+            <HeadlinesShow />
+          </Route>
+          <Route path="/headlinesIndex">
             <Headlines />
           </Route>
           <Route path="/">

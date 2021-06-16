@@ -16,7 +16,7 @@ const Navbar = () => {
 						  <Link to="/">Home</Link>
             </div>
             <div className = "navbar-item">
-						  <Link to="/headlines">Top Headlines</Link>
+						  <Link to="/headlinesIndex">Top Headlines</Link>
             </div>
             <div className = "navbar-item">
 						My News

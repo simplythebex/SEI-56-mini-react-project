@@ -7,12 +7,12 @@ const HeadlinesIndex = () => {
   const [headlines, setHeadlines] = useState([])
   const [hasError, setHasError] = useState(false)
 
-  const apiKey = '708821c691b64f21992c12c42861940a'
+  const apiKey = 'd9cff572-4c48-47ee-ac50-8130ba620b9c'
   useEffect(() => {
     const getData = async ()  => {
       try {
-        const { data } = await axios.get(`https://newsapi.org/v2/top-headlines?country=gb&apiKey=${apiKey}`)
-        setHeadlines(data.articles)
+        const { data } = await axios.get(`https://content.guardianapis.com/search?show-fields=thumbnail&api-key=${apiKey}`)
+        setHeadlines(data.response.results)
       } catch (err) {
         console.log(err)
         setHasError(true)
@@ -32,6 +32,7 @@ const HeadlinesIndex = () => {
             <h2 className="title is-1 has-text-centered">Top Headlines</h2>
             <div className="columns is-multiline">
               {headlines.map((headline, index) => {
+                console.log(headline.id)
                 return <HeadlinesCard key={index} {...headline}/>
               })} 
             </div>

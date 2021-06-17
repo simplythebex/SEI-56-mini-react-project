@@ -6,7 +6,6 @@ import Navbar from './components/Navbar'
 import Headlines from './components/Headlines/HeadlinesIndex'
 import HeadlinesShow from './components/Headlines/HeadlinesShow'
 
-
 function App() {
   return (
     <>
@@ -14,7 +13,7 @@ function App() {
         <Navbar />
       
         <Switch>
-          <Route path="/headlines/:publishedAt">
+          <Route path="/headlines/:id">
             <HeadlinesShow />
           </Route>
           <Route path="/headlinesIndex">

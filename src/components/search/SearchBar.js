@@ -14,10 +14,7 @@ const SearchBar = () => {
 
   const handleSubmit = (event) => {
     event.preventDefault()
-    // console.log('clicked')
   }
-  // console.log('search->', search)
-  // console.log('new search->', newSearch)
 
   const handleChange = (event) => {
     setSearchTerm(event.target.value)

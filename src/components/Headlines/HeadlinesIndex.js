@@ -7,9 +7,11 @@ import { useLocation } from 'react-router-dom'
 const HeadlinesIndex = () => {
   const { state: search } = useLocation()
   console.log('SEARCH', search)
-
+  console.log(search === undefined)
+  
   const [headlines, setHeadlines] = useState([])
   const [hasError, setHasError] = useState(false)
+  const [titleText, setTitleText] = useState('Top Headlines')
 
   const apiKey = 'd9cff572-4c48-47ee-ac50-8130ba620b9c'
 
@@ -19,9 +21,11 @@ const HeadlinesIndex = () => {
         if (search) {
           const { data } = await axios.get(`https://content.guardianapis.com/search?q=${search}&show-fields=thumbnail&api-key=${apiKey}`)
           setHeadlines(data.response.results)
+          setTitleText(`News about ${search}`)
         } else {
           const { data } = await axios.get(`https://content.guardianapis.com/search?show-fields=thumbnail&api-key=${apiKey}`)
           setHeadlines(data.response.results)
+          setTitleText('Top Headlines')
         }
       } catch (err) {
         console.log(err)
@@ -39,7 +43,7 @@ const HeadlinesIndex = () => {
       <div className="container">
         {headlines.length > 0 ? 
           <>
-            <h2 className="title is-1 has-text-centered">Top Headlines</h2>
+            <h2 className="title is-1 has-text-centered">{titleText}</h2>
             <SearchBar />
 
             <div className="grid-container">

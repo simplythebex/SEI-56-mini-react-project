@@ -32,20 +32,20 @@ const HeadlinesShow = () => {
               <div>
                 <div className="is-vertical is-8">
                   <div className="tile">
-                    <div className="tile is-parent">
+                    <div className="tile is-parent is-verticle">
                       <div className="tile is-child notification">
-                        <figure className="image is-16-by-9">
+                        <h1 className="title is-1 has-text-centered" key={index}>{article.webTitle}</h1>
+                        <article className="tile is-child notification">
+                          <p>{article.blocks.body[0].bodyTextSummary}</p>
+                          <hr />
+                        </article>
+                      </div>
+                      <div className="tile is-child notification">
+                        <figure className="show-image image is-16-by-9">
                           <img src={article.fields.thumbnail} />
+                          <p className="follow-link has-text-centered">For more infomation follow the link: <a href={article.webUrl} target="_blank" rel="noreferrer">{article.webUrl}</a></p>
                         </figure>
                       </div>
-                      <article className="tile is-child notification">
-                        <h1 className="title is-1 has-text-centered" key={index}>{article.webTitle}</h1>
-                        <p>{article.blocks.body.map(bodyText => bodyText.bodyTextSummary)}</p>
-                        <hr />
-                        <p>For more infomation follow the link...</p>
-                        <a href={article.webUrl} target="_blank" rel="noreferrer">{article.webUrl}</a>
-
-                      </article>
                     </div>
                   </div>
                 </div>

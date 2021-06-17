@@ -1,25 +1,26 @@
 /* eslint-disable no-unused-vars */
-
 import React, { useState, useEffect } from 'react'
-import axios from 'axios'
+import { Link, useLocation } from 'react-router-dom'
 
 const SearchBar = () => {
+  const location = useLocation()
 
-  const [search, setSearch] = useState('')
-  const [newSearch, setNewSearch] = useState('')
+  const [searchTerm, setSearchTerm] = useState('')
+
+  useEffect(() => {
+    setSearchTerm('')
+  }, [location.pathname])
+  
 
   const handleSubmit = (event) => {
     event.preventDefault()
-    console.log('clicked')
-    console.log('handlesubmint->', newSearch)
-    setSearch(newSearch)
-    setNewSearch('')
+    // console.log('clicked')
   }
-  console.log('search->', search)
-  console.log('new search->', newSearch)
+  // console.log('search->', search)
+  // console.log('new search->', newSearch)
 
   const handleChange = (event) => {
-    setNewSearch(event.target.value)
+    setSearchTerm(event.target.value)
   }
 
 
@@ -28,16 +29,24 @@ const SearchBar = () => {
       <div className="field has-addons">
         <form onSubmit={handleSubmit} >
           <div className="control">
-            <input onChange={handleChange} className="input" type="text" placeholder="Search" />
+            <input value={searchTerm} onChange={handleChange} className="input" type="text" placeholder="Search" />
           </div>
-          <div className="control">
-            <input className="button is-info" type="submit" />
-          </div>
+          <span>
+            <div className="control search">
+              <Link to={{
+                pathname: '/headlinesIndex',
+                state: searchTerm,
+              }} 
+              className="button is-primary" 
+              type="submit" >
+              Search
+              </Link>
+            </div>
+          </span>
         </form>
       </div>
     </>
   )
-
 
 }
 

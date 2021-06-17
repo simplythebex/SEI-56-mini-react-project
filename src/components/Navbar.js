@@ -2,7 +2,7 @@ import React from 'react'
 // import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { Link } from 'react-router-dom'
 // import { solid } from '@fortawesome/fontawesome-svg-core/import.macro'
-import SearchBar from './search/SearchBar'
+
 
 const Navbar = () => {
   return (
@@ -11,13 +11,10 @@ const Navbar = () => {
         <div className="container">
           <div className="navbar-brand">
             <span className="icon">
-              <i className="fas fa-home"></i>
+              <i className="fas fa-home" aria-hidden="true"></i>
             </span>
           </div>
           <div className="navbar-start">
-            <div className = "navbar-item">
-						  <Link to="/">Home</Link>
-            </div>
             <div className = "navbar-item">
 						  <Link to="/headlinesIndex">Top Headlines</Link>
             </div>
@@ -27,7 +24,7 @@ const Navbar = () => {
           </div>
           <div className="navbar-end">
             <div className="navbar-item">
-              <SearchBar />
+              <Link to="/">Home</Link>
             </div>
           </div>
         </div>

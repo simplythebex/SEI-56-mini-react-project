@@ -1,0 +1,63 @@
+@import url('https://fonts.googleapis.com/css2?family=Bai+Jamjuree&display=swap');
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+.hero {
+  background-image: url(./images/News-1-480x289.gif.gif);
+  background-position: center top;
+  background-repeat: no-repeat;
+  background-size: 100%;
+  padding-top: 0;
+}
+nav {
+  a{
+    color:rgb(59, 221, 181);
+  }
+  a:hover{
+    cursor: pointer;
+    color: white;
+  }
+}
+
+.button {
+  background-color: rgb(59, 221, 181);
+}
+
+form {
+  display: flex;
+  margin-bottom: 20px;
+    .search {
+      margin-left: 10px;
+    }
+}
+
+.column {
+  border: 1px solid lightgray;
+  border-radius: 5px;
+  max-height: 800px;
+}
+
+  .card-header {
+    min-height: 85px;
+    padding-top: 10px;
+    box-shadow: none;
+    text-align: center;
+    p {
+      color:black;
+    }
+  }
+
+.follow-link {
+  margin: 20px;
+}
+
+.show-image {
+  margin-top: 20px;
+}
+
+h2 {
+  font-family: 'Bai Jamjuree', sans-serif;
+}

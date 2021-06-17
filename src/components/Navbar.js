@@ -19,7 +19,7 @@ const Navbar = () => {
 						  <Link to="/headlinesIndex">Top Headlines</Link>
             </div>
             <div className = "navbar-item">
-						My News
+						  <Link to="/myNews">My News</Link>
             </div>
           </div>
           <div className="navbar-end">

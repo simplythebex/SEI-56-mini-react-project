@@ -31,29 +31,27 @@ const HeadlinesShow = () => {
             {headline.map((article, index) => {
               // console.log('summary', article.blocks.body[1].bodyTextSummary)
               return (
-                <>
-                  <div>
-                    <div className="is-vertical is-8">
-                      <div className="tile">
-                        <div className="tile is-parent is-verticle">
-                          <div className="tile is-child notification">
-                            <h1 className="title is-1 has-text-centered" key={index}>{article.webTitle}</h1>
-                            <article className="tile is-child notification">
-                              <p>{article.blocks.body[0].bodyTextSummary}</p>
-                              <hr />
-                            </article>
-                          </div>
-                          <div className="tile is-child notification">
-                            <figure className="show-image image is-16-by-9">
-                              <img src={article.fields.thumbnail} />
-                              <p className="follow-link has-text-centered">For more infomation follow the link: <a href={article.webUrl} target="_blank" rel="noreferrer">{article.webUrl}</a></p>
-                            </figure>
-                          </div>
+                <div key={index}>
+                  <div className="is-vertical is-8">
+                    <div className="tile">
+                      <div className="tile is-parent is-verticle">
+                        <div className="tile is-child notification">
+                          <h1 className="title is-1 has-text-centered">{article.webTitle}</h1>
+                          <article className="tile is-child notification">
+                            <p>{article.blocks.body[0].bodyTextSummary}</p>
+                            <hr />
+                          </article>
+                        </div>
+                        <div className="tile is-child notification">
+                          <figure className="show-image image is-16-by-9">
+                            <img src={article.fields.thumbnail} />
+                            <p className="follow-link has-text-centered">For more infomation follow the link: <a href={article.webUrl} target="_blank" rel="noreferrer">{article.webUrl}</a></p>
+                          </figure>
                         </div>
                       </div>
                     </div>
                   </div>
-                </>
+                </div>
               )
             })}
           </div>

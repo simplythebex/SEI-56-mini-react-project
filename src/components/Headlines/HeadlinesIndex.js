@@ -35,9 +35,6 @@ const HeadlinesIndex = () => {
     getData()
   }, [search])
 
-  // console.log('headlines', headlines)
-  // console.log('headlines index 0', headlines)
-
   return (
     <section className="section">
       <div className="container">
@@ -48,7 +45,6 @@ const HeadlinesIndex = () => {
 
             <div className="grid-container">
               {headlines.map((headline, index) => {
-                // console.log(headline.id)
                 return <HeadlinesCard key={index} {...headline}/>
               })} 
             </div>

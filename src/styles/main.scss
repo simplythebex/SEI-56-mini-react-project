@@ -64,7 +64,7 @@ form {
     justify-content: center;
   }
 
-  #read-more {
+  .footer-button {
     background-color: rgb(59, 221, 181);
     border-radius: 5px;
     width: 130px;
@@ -74,8 +74,9 @@ form {
     margin: 20px;
   }
 
-  #read-more:hover {
-    background-color: rgb(47, 192, 156);;
+  .footer-button:hover {
+    background-color: rgb(47, 192, 156);
+    cursor: pointer;
   }
 
 .follow-link {

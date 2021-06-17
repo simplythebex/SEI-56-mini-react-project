@@ -5,6 +5,7 @@ import Home from './components/Home'
 import Navbar from './components/Navbar'
 import Headlines from './components/Headlines/HeadlinesIndex'
 import HeadlinesShow from './components/Headlines/HeadlinesShow'
+import MyNews from './components/search/MyNews'
 
 function App() {
   return (
@@ -15,6 +16,9 @@ function App() {
         <Switch>
           <Route path="/headlines/:id">
             <HeadlinesShow />
+          </Route>
+          <Route path="/myNews">
+            <MyNews />
           </Route>
           <Route path="/headlinesIndex">
             <Headlines />

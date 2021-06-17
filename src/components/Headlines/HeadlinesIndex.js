@@ -21,8 +21,8 @@ const HeadlinesIndex = () => {
     getData()
   }, [])
 
-  console.log('headlines', headlines)
-  console.log('headlines index 0', headlines)
+  // console.log('headlines', headlines)
+  // console.log('headlines index 0', headlines)
 
   return (
     <section className="section">
@@ -32,7 +32,7 @@ const HeadlinesIndex = () => {
             <h2 className="title is-1 has-text-centered">Top Headlines</h2>
             <div className="columns is-multiline">
               {headlines.map((headline, index) => {
-                console.log(headline.id)
+                // console.log(headline.id)
                 return <HeadlinesCard key={index} {...headline}/>
               })} 
             </div>

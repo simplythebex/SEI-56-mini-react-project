@@ -5,7 +5,7 @@ const HeadlinesCard = ({ id, webTitle, fields }) => {
 
   return (
     <div className="column is-one-quarter-desktop is-one-third-tablet">
-      <Link to={`/headlines/${id}`}>
+      <Link to={{ pathname: `/headlines/${id}`, state: id }}>
         <div className="card-header">
           <p>{webTitle}</p>
         </div>

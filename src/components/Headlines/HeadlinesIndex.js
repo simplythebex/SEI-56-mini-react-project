@@ -42,7 +42,7 @@ const HeadlinesIndex = () => {
             <h2 className="title is-1 has-text-centered">Top Headlines</h2>
             <SearchBar />
 
-            <div className="columns is-multiline is-8">
+            <div className="grid-container">
               {headlines.map((headline, index) => {
                 // console.log(headline.id)
                 return <HeadlinesCard key={index} {...headline}/>

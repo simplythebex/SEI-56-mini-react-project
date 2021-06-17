@@ -1,4 +1,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Bai+Jamjuree&display=swap');
+
+$primaryColor: rgb(59, 221, 181);
+
 * {
   padding: 0;
   margin: 0;
@@ -14,7 +17,7 @@
 }
 nav {
   a{
-    color:rgb(59, 221, 181);
+    color: $primaryColor;
   }
   a:hover{
     cursor: pointer;
@@ -22,8 +25,19 @@ nav {
   }
 }
 
+.grid-container {
+  display: grid;
+  grid-template-columns: auto auto auto;
+  grid-gap: 20px;
+}
+div.grid-item {
+  border-radius: 5px;
+  box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+  min-height: 400px;
+}
+
 .button {
-  background-color: rgb(59, 221, 181);
+  background-color: $primaryColor;
 }
 
 form {
@@ -33,31 +47,46 @@ form {
       margin-left: 10px;
     }
 }
-
-.column {
-  border: 1px solid lightgray;
-  border-radius: 5px;
-  max-height: 800px;
-}
-
-  .card-header {
+  .header {
     min-height: 85px;
     padding-top: 10px;
     box-shadow: none;
     text-align: center;
+    min-height: 100px;
     p {
       color:black;
+      padding: 5px;
     }
+  }
+
+  .card-footer {
+    display: flex;
+    justify-content: center;
+  }
+
+  #read-more {
+    background-color: rgb(59, 221, 181);
+    border-radius: 5px;
+    width: 130px;
+    padding: 5px 15px;
+    text-align: center;
+    color: white;
+    margin: 20px;
+  }
+
+  #read-more:hover {
+    background-color: rgb(47, 192, 156);;
   }
 
 .follow-link {
   margin: 20px;
 }
 
-.show-image {
-  margin-top: 20px;
-}
-
 h2 {
   font-family: 'Bai Jamjuree', sans-serif;
+  background-image: url(./images/plain-white-background-1480544970glP.jpeg);
+  background-size: 50%;
+  background-repeat: no-repeat;
+  background-position: center;
+  padding: 20px;
 }

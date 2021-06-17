@@ -4,17 +4,18 @@ import { Link } from 'react-router-dom'
 const HeadlinesCard = ({ id, webTitle, fields }) => {
 
   return (
-    <div className="column is-one-third">
-      <Link to={{ pathname: `/headlines/${id}`, state: id }}>
-        <div className="card-header">
-          <p>{webTitle}</p>
-        </div>
-        <div className="card-image">
-          <figure className="image">
-            <img src={fields.thumbnail} alt={webTitle} />
-          </figure>
-        </div>
-      </Link>
+    <div className="grid-item">
+      <div className="header">
+        <p>{webTitle}</p>
+      </div>
+      <div className="image">
+        <img className="opacity" src={fields.thumbnail} alt={webTitle} />
+      </div>
+      <div className="card-footer">
+        <Link to={{ pathname: `/headlines/${id}`, state: id }}>
+          <div id="read-more">Read More</div>
+        </Link>
+      </div>
     </div>
   )
 

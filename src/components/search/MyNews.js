@@ -29,7 +29,7 @@ const MyNews = ({ saved }) => {
           <h2 className="title is-1 has-text-centered">Your Saved Stories</h2>
 
           {article ? 
-            <div className="grid-item">
+            <div className="grid-item my-news-card">
               <div className="header">
                 <p>{article.title}</p>
               </div>

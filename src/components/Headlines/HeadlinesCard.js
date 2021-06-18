@@ -20,6 +20,7 @@ const HeadlinesCard = ({ id, webTitle, fields }) => {
 
   let thumbnail = ''
 
+
   if (fields !== undefined) {
     thumbnail = fields.thumbnail
   } else {
@@ -62,9 +63,7 @@ const HeadlinesCard = ({ id, webTitle, fields }) => {
         </Link>
         <form id='save' onClick={handleSubmit}>
           <div onClick={notify} className="footer-button" id="save">Save</div>
-          <ToastContainer 
-            
-          />
+          <ToastContainer />
         </form>
       </div>
     </div>

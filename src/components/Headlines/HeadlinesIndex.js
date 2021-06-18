@@ -1,3 +1,4 @@
+/* eslint-disable no-unused-vars */
 import React, { useState, useEffect } from 'react'
 import axios from 'axios'
 import HeadlinesCard from './HeadlinesCard'
@@ -35,6 +36,7 @@ const HeadlinesIndex = () => {
     getData()
   }, [search])
 
+
   return (
     <section className="section">
       <div className="container">
@@ -45,7 +47,9 @@ const HeadlinesIndex = () => {
 
             <div className="grid-container">
               {headlines.map((headline, index) => {
-                return <HeadlinesCard key={index} {...headline}/>
+                return <HeadlinesCard 
+                  key={index} 
+                  { ...headline } />
               })} 
             </div>
           </>

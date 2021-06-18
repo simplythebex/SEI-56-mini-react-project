@@ -21,7 +21,7 @@ const HeadlinesShow = () => {
       }
     }
     getData()
-  }, [id])
+  }, [id])  
 
   return (
     <>

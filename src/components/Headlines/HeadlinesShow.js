@@ -41,7 +41,7 @@ const HeadlinesShow = () => {
                       <p className="has-text-centered">{article.blocks.body[0].bodyTextSummary}</p>
                       <hr />
                     </article>
-                    <p className="follow-link has-text-centered">For more infomation follow the link: <a id="info-link" href={article.webUrl} target="_blank" rel="noreferrer">{article.webUrl}</a></p>
+                    <p className="follow-link has-text-centered">For more infomation <a id="info-link" href={article.webUrl} target="_blank" rel="noreferrer">click here</a></p>
                   </div>
                 </div>
 

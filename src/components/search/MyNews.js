@@ -28,19 +28,23 @@ const MyNews = ({ saved }) => {
         <>
           <h2 className="title is-1 has-text-centered">Your Saved Stories</h2>
 
-          <div className="grid-item">
-            <div className="header">
-              <p>{article.title}</p>
+          {article ? 
+            <div className="grid-item">
+              <div className="header">
+                <p>{article.title}</p>
+              </div>
+              <div className="image">
+                <img src={article.thumbnail} alt={article.title} />
+              </div>
+              <div className="card-footer">
+                <Link to={{ pathname: `/headlines/${article.id}`, state: article.id }}>
+                  <div className="footer-button" id="read-more">Read More</div>
+                </Link> 
+              </div>
             </div>
-            <div className="image">
-              <img src={article.thumbnail} alt={article.title} />
-            </div>
-            <div className="card-footer">
-              <Link to={{ pathname: `/headlines/${article.id}`, state: article.id }}>
-                <div className="footer-button" id="read-more">Read More</div>
-              </Link>
-            </div>
-          </div>
+            :
+            <p className="has-text-centered">You have no saved stories!</p>
+          }
         </>
       </div>
     </section>

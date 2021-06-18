@@ -21,7 +21,7 @@ const HeadlinesIndex = () => {
         if (search) {
           const { data } = await axios.get(`https://content.guardianapis.com/search?q=${search}&show-fields=thumbnail&api-key=${apiKey}`)
           setHeadlines(data.response.results)
-          setTitleText(`News about ${search}`)
+          setTitleText(`Showing results for ${search}`)
         } else {
           const { data } = await axios.get(`https://content.guardianapis.com/search?show-fields=thumbnail&api-key=${apiKey}`)
           setHeadlines(data.response.results)

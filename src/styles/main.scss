@@ -12,7 +12,7 @@ $primaryColor: rgb(59, 221, 181);
   background-image: linear-gradient(rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0.3)), url(./images/newspapers-segment.jpeg);
   background-position: center top;
   background-repeat: no-repeat;
-  background-size: 100%;
+  background-size: cover;
   padding-top: 0;
   .hero-body{
     display: flex;
@@ -63,6 +63,8 @@ div.grid-item {
 
 figure img {
   border-radius: 10px;
+  max-width: 750px;
+  margin: 0 auto;
 }
 
 .button {
@@ -123,6 +125,11 @@ h2 {
   background-position: center;
   padding: 20px;
 }
+
+#toastId {
+  color: $primaryColor;
+}
+
 
 @media screen and (max-width: 1200px) {
   .article-container-big {

@@ -9,12 +9,30 @@ $primaryColor: rgb(59, 221, 181);
 }
 
 .hero {
-  background-image: url(./images/News-1-480x289.gif.gif);
+  background-image: linear-gradient(rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0.3)), url(./images/newspapers-segment.jpeg);
   background-position: center top;
   background-repeat: no-repeat;
   background-size: 100%;
   padding-top: 0;
+  .hero-body{
+    display: flex;
+    justify-content: center;
+  }
+  .title-box {
+    background-color: rgb(71, 70, 70);
+    opacity: 0.9;
+    padding: 10px 20px;
+    border-radius: 10px;
+  }
+  .title-box:hover {
+    opacity: 1;
+    cursor: pointer;
+  }
+  h1 {
+    color: white;
+  }
 }
+
 nav {
   a{
     color: $primaryColor;
@@ -23,6 +41,13 @@ nav {
     cursor: pointer;
     color: white;
   }
+}
+#info-link {
+  color: $primaryColor;
+}
+
+#info-link:hover {
+  color:rgb(47, 192, 156);
 }
 
 .grid-container {
@@ -36,8 +61,16 @@ div.grid-item {
   min-height: 400px;
 }
 
+figure img {
+  border-radius: 10px;
+}
+
 .button {
   background-color: $primaryColor;
+}
+
+.article-container-big {
+  margin: 0 250px;
 }
 
 form {
@@ -48,7 +81,7 @@ form {
     }
 }
   .header {
-    min-height: 85px;
+    min-height: 90px;
     padding-top: 10px;
     box-shadow: none;
     text-align: center;
@@ -85,9 +118,23 @@ form {
 
 h2 {
   font-family: 'Bai Jamjuree', sans-serif;
-  background-image: url(./images/plain-white-background-1480544970glP.jpeg);
   background-size: 50%;
   background-repeat: no-repeat;
   background-position: center;
   padding: 20px;
+}
+
+@media screen and (max-width: 1200px) {
+  .article-container-big {
+    margin: 0px 50px;
+  }
+  .grid-container {
+      grid-template-columns: auto auto;
+  }
+}
+
+@media screen and (max-width: 750px) {
+   .grid-container {
+      grid-template-columns: auto;
+  }
 }

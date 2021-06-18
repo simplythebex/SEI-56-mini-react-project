@@ -6,30 +6,18 @@ import { Link } from 'react-router-dom'
 
 const MyNews = ({ saved }) => {
 
-  let title 
-  let thumbnail
-  let id
+  let article 
 
   const [hasError, setHasError] = useState(false)
 
   console.log(saved)
 
   const getTitleFromLocalStorage = () => {
-    return window.localStorage.getItem('title')
-  }
-
-  const getThumbnailFromLocalStorage = () => {
-    return window.localStorage.getItem('thumbnail')
-  }
-
-  const getIdFromLocalStorage = () => {
-    return window.localStorage.getItem('id')
+    return JSON.parse(window.localStorage.getItem('saved-article'))
   }
 
   const getData = () => {
-    title = getTitleFromLocalStorage()
-    thumbnail = getThumbnailFromLocalStorage()
-    id = getIdFromLocalStorage()
+    article = getTitleFromLocalStorage()
   }
 
   getData()
@@ -42,13 +30,13 @@ const MyNews = ({ saved }) => {
 
           <div className="grid-item">
             <div className="header">
-              <p>{title}</p>
+              <p>{article.title}</p>
             </div>
             <div className="image">
-              <img src={thumbnail} alt={title} />
+              <img src={article.thumbnail} alt={article.title} />
             </div>
             <div className="card-footer">
-              <Link to={{ pathname: `/headlines/${id}`, state: id }}>
+              <Link to={{ pathname: `/headlines/${article.id}`, state: article.id }}>
                 <div className="footer-button" id="read-more">Read More</div>
               </Link>
             </div>

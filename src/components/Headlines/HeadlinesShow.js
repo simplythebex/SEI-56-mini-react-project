@@ -44,7 +44,6 @@ const HeadlinesShow = () => {
                     <p className="follow-link has-text-centered">For more infomation <a id="info-link" href={article.webUrl} target="_blank" rel="noreferrer">click here</a></p>
                   </div>
                 </div>
-
               )
             })}
           </div>

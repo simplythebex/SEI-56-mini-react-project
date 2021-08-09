@@ -37,17 +37,27 @@ Once our MVP was met I took the lead in developing a save feature, with the inte
 
 ### Displaying data on the index page
 
-Initially we used a basic request to the API, to get an overview of all news stories held in the API and display these, however after reading further into the documentation I found a way of using a search function in the request, meaning we could display results from a search using a new GET request from the API, rather than filtering the data from a more generic GET request
+Initially we used a basic request to the API, to get an overview of all news stories held in the API and display these, however after reading further into the documentation I found a way of using a search function in the request, meaning we could display results from a search using a new GET request from the API, rather than filtering the data from a more generic GET request.
+
+<img width="1044" alt="API GET requests" src="https://user-images.githubusercontent.com/73421779/128715247-31f64225-eed1-4b0d-a4b4-272d89de5efe.png">
+
 
 When a user submits a search term, this is set to state. The useEffect shown above is dependent on the search term, therefore when this is changed a new request to the API is carried out. If a search term has been set to the ‘search’ variable, the GET request will be performed to a specific url which allows a search term to be specified. If there is no search term, a generic GET request will be carried out.
 
 In both cases the results of the GET request will be set to state and displayed.
 
+![Index Page Screenshot](https://user-images.githubusercontent.com/73421779/128715397-5559f8c6-3fde-4721-8454-293e3f6ea1fa.png)
+
 ### Making specific GET requests
 
 To display a detailed version of each news story, we wanted to make a get request for that specific story. Again, reading the API documentation showed that it is possible to use the ID in the GET request to achieve this. To get the ID we included the ID in the URL of the specific news story, so that when the user navigated to the news story, the ID was accessible in the URL:
 
+<img width="548" alt="Link to detailed view" src="https://user-images.githubusercontent.com/73421779/128715652-06944e6f-4566-4c91-b0e2-5395124651f6.png">
+
 In a separate component, uselocation() is used to get the ID from the URL once the user has navigated to a specific story. This is then used in a GET request to get and display the data from the API.
+
+<img width="1096" alt="Specific GET request" src="https://user-images.githubusercontent.com/73421779/128715747-0de9ef6c-c887-418e-8fa6-e6636d62b6e8.png">
+
 
 ## Bugs
 
@@ -63,10 +73,13 @@ Another win was the use of local storage to use the save feature. I had to resea
 
 A big challenge of this project was understanding the API. The API has an unusual way of displaying IDs of the articles, which made accessing individual articles a challenge. It was important that we overcame this so that users could view further details of each article. 
 
+<img width="586" alt="ID in Insomnia" src="https://user-images.githubusercontent.com/73421779/128715903-084e7b77-1271-4c06-9e08-1546237e81b4.png">
+
 The API itself was also a challenge to navigate, therefore we spent some time reading the documentation and in insomnia navigating through the API. While it took some time to work out how to use the API to get the information we wanted to display, it was a big win that we managed to do so. 
 
 ## Future
 
 In the future I would like to add filters to the app so that the user can view new stories about specific topics, for example “healthcare” or “technology”. I think this functionality would make the app more enjoyable to use. Each article in the API has a “sectionId” and a “sectionName” which could be used to filter the results by topic. Below is an example of request data in insomnia, including the “sectionId” and “sectionName” keys.
 
+<img width="707" alt="Insomnia request" src="https://user-images.githubusercontent.com/73421779/128715944-857affb4-ed8d-4c2c-8d75-76ef345f5a9e.png">
 

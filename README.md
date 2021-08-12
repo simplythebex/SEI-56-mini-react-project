@@ -1,5 +1,11 @@
 # Project 2: NewsApp
 
+## Project Members
+- Aya Mallah: https://github.com/Ayamallahx
+- Bex Jones: https://github.com/simplythebex
+
+## Overview
+
 NewsApp uses the Guardians API to show the user the latest news stories in the UK. The user is able to search for topics they are interested in, as well as save news articles to be accessed again.
 
 This was a hackathon style project, it was paircoded throughout with my partner and I taking it in turns to either write the code or to provide support and check for errors. We used zoom and VSCode’s live share feature to collaborate on this project, and it was completed in 48 hours.
@@ -77,7 +83,7 @@ A big challenge of this project was understanding the API. The API has an unusua
 
 The API itself was also a challenge to navigate, therefore we spent some time reading the documentation and in insomnia navigating through the API. While it took some time to work out how to use the API to get the information we wanted to display, it was a big win that we managed to do so. 
 
-## Future
+## Future Improvements
 
 In the future I would like to add filters to the app so that the user can view new stories about specific topics, for example “healthcare” or “technology”. I think this functionality would make the app more enjoyable to use. Each article in the API has a “sectionId” and a “sectionName” which could be used to filter the results by topic. Below is an example of request data in insomnia, including the “sectionId” and “sectionName” keys.
 

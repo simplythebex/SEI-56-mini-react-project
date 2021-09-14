@@ -25,14 +25,14 @@ The app should be created using JavaScript, React and HTML/CSS for styling.
 
 ## Technologies
 
-JavaScript
-React
-HTML 
-SASS
-Bulma
-Git 
-GitHub
-The Guardian public API
+- JavaScript
+- React
+- HTML 
+- SASS
+- Bulma
+- Git 
+- GitHub
+- The Guardian public API
 
 ## Approach 
 
